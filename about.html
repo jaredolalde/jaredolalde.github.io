@@ -8,62 +8,90 @@
         body {
             background-color: black;
             color: white;
-            font-size: 16px; /* font size */
-            font-family: Arial, sans-serif; /* font family */
-            font-weight: bold; /* font weight */
-            font-style: italic; /* font style */
-            text-align: center; /* text alignment */
-            text-decoration: underline; /* text decoration */
-            text-transform: uppercase; /* text transformation */
-            line-height: 1.5; /* line height */
-            letter-spacing: 2px; /* letter spacing */
-            word-spacing: 4px; /* word spacing */
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            word-spacing: 4px;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            margin: 20px; /* margin */
-            padding: 20px; /* padding */
-            border: 2px solid #555; /* border */
-            width: 300px; /* width */
-            height: 200px; /* height */
-            display: block; /* display type */
-            position: relative; /* positioning */
-            top: 20px; /* top position */
-            left: 20px; /* left position */
-            float: left; /* float */
-            clear: both; /* clear */
-            z-index: 1; /* z-index */
+            /* Your existing container styles here */
         }
 
         /* CSS for text and font properties */
         .no-transform {
             text-transform: none; /* Reset text transformation */
         }
+
+        /* Flexbox container for header, main, and footer */
+        .flex-container {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            min-height: 100vh; /* Minimum viewport height */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Center navigation links horizontally */
+        }
+        nav li {
+            margin: 0 20px;
+        }
+
+        /* Main content styles */
+        main {
+            flex: 1; /* Allow main to grow and take remaining space */
+            padding: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
     </style>
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="interests.html">Interests</a></li>
-        </ul>
-    </nav>
-</header>
+<div class="flex-container">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="interests.html">Interests</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-    <h1>About Me</h1>
-    <img src="solo.jpeg"  alt="solo Image"  width="360" height="500">
-    <p>Welcome to my About Me page.</p>
-    <p>hi, my name is Jared Olalde </p>
-    <p>This is my first semester at CSUF, and I am a CS major. </p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2765.2534642813075!2d-117.886905675735!3d33.882220371668865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd5cc341bc34d%3A0xa1199206c3371c88!2sCollege%20of%20Engineering%20%26%20Computer%20Science!5e0!3m2!1sen!2sus!4v1694222166132!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <main>
+        <h1>About Me</h1>
+        <img src="solo.jpeg" alt="solo Image" width="360" height="500">
+        <p>Welcome to my About Me page.</p>
+        <p>hi, my name is Jared Olalde</p>
+        <p>This is my first semester at CSUF, and I am a CS major.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2765.2534642813075!2d-117.886905675735!3d33.882220371668865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd5cc341bc34d%3A0xa1199206c3371c88!2sCollege%20of%20Engineering%20%26%20Computer%20Science!5e0!3m2!1sen!2sus!4v1694222166132!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
 
-
-</main>
-
-<footer>
-    CHECK THE INTEREST TAB FOR MORE INFO
-</footer>
+    <footer>
+        CHECK THE INTEREST TAB FOR MORE INFO
+    </footer>
+</div>
 </body>
 </html>
